@@ -27,4 +27,4 @@ engineering/languages/zig/
 - Put only verified version-specific behavior in `versions/<version>.md`.
 - Put concrete capacities, limits, topology, persistence rules, and exceptions in the project repository.
 
-Where a standalone project copies guidance from Groot, record source paths and snapshot dates in that project.
+Where a standalone project copies guidance from this repository, record source paths and snapshot dates in that project.

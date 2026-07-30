@@ -51,7 +51,7 @@ engineering/languages/
 - If guidance applies only to one language version, it belongs in that version delta.
 - If guidance is a stricter or specialized engineering profile rather than language-wide guidance, put it under `engineering/languages/<language>/profiles/`.
 - If guidance applies only to one project, it belongs in that project's repository, not here.
-- If project guidance becomes reusable, process it back into Groot deliberately instead of treating the project copy as canonical.
+- If project guidance becomes reusable, process it back into this repository deliberately instead of treating the project copy as canonical.
 
 ## Single-Language Projects
 
@@ -62,9 +62,9 @@ For a project using one language:
 3. Copy the applicable version delta, when the project targets a specific version.
 4. Merge or reference those copied sections inside the project's own `AGENTS.md`.
 5. Add project-specific guidance after the copied language guidance.
-6. Record the Groot source paths and snapshot date in the copied file.
+6. Record the source paths and snapshot date in the copied file.
 
-The resulting project repository must remain standalone. It must not require Groot to build, test, review, or submit.
+The resulting project repository must remain standalone. It must not require this repository to build, test, review, or submit.
 
 ## Mixed-Language Projects
 
@@ -89,31 +89,31 @@ Do not make one language's guide implicitly control another language's files.
 - Linking from one `AGENTS.md` to another is useful for human navigation only.
 - To make instructions portable and active, copy the relevant text into the applicable `AGENTS.md`.
 
-## No Symlinks or Groot Dependency
+## No External Guidance Dependency
 
-Standalone project repositories must not depend on Groot.
+Standalone project repositories must not depend on this repository at build, test, review, packaging, or submission time.
 
-- Do not symlink project guidance back to Groot.
-- Do not require Groot paths during build, test, lint, review, packaging, or submission.
-- Do not assume reviewers, CI, editors, or AI tools can access Groot.
+- Do not symlink project guidance back to this repository.
+- Do not require paths from this repository during build, test, lint, review, packaging, or submission.
+- Do not assume reviewers, CI, editors, or AI tools can access this repository.
 - Copied guidance is a snapshot, not a live dependency.
 
 ## Snapshot Metadata
 
-Copied project guidance should record its Groot source and snapshot date.
+Copied project guidance should record its source paths and snapshot date.
 
-This allows later stale-snapshot detection without making the project depend on Groot.
+This allows later stale-snapshot detection without making the project depend on this repository.
 
 Recommended metadata:
 
 ```markdown
 <!--
-Groot guidance snapshot:
+Engineering guidance snapshot:
 - Source: engineering/languages/python/base.md
 - Source: engineering/languages/python/versions/3.13.md
 - Snapshot date: YYYY-MM-DD
-- Groot revision: optional commit hash or archive version when available
+- Repository revision: optional commit hash or archive version when available
 -->
 ```
 
-If Groot is not a Git repository, use the snapshot date and exact source paths. When Groot later gains revisions or releases, include that identifier too.
+If a repository revision is not available, use the snapshot date and exact source paths.

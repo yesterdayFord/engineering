@@ -2,7 +2,7 @@
 
 This profile captures a stricter deterministic-systems engineering style inspired by TigerBeetle's TigerStyle and architecture.
 
-Groot's Zig base guide is already TigerStyle-inspired by default. Apply this profile when a project wants to tighten that default into a more explicit deterministic-systems discipline because its correctness, latency, durability, or operational requirements justify the constraints.
+The Zig base guide is already TigerStyle-inspired by default. Apply this profile when a project wants to tighten that default into a more explicit deterministic-systems discipline because its correctness, latency, durability, or operational requirements justify the constraints.
 
 ## Use When
 

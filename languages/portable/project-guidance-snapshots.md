@@ -1,6 +1,6 @@
 # Project Guidance Snapshots
 
-Project repositories should contain the guidance needed to work on that project without requiring access to Groot.
+Project repositories should contain the guidance needed to work on that project without requiring access to this repository.
 
 The project copy is a portable snapshot. This repository remains the canonical source for reusable guidance.
 
@@ -12,7 +12,7 @@ The project copy is a portable snapshot. This repository remains the canonical s
 4. Copy the relevant text into the project's `AGENTS.md` or another project-local guidance file.
 5. Add project-specific rules in the project repository.
 6. Record source metadata at the top of the copied guidance.
-7. Do not symlink, import, or dynamically load the Groot files.
+7. Do not symlink, import, or dynamically load files from this repository.
 
 Profiles are copied only when the project deliberately adopts that stricter or specialized guidance. Do not apply a profile merely because a project uses the same language.
 
@@ -20,20 +20,20 @@ Profiles are copied only when the project deliberately adopts that stricter or s
 
 Every copied snapshot should include:
 
-- source file paths in Groot
+- source file paths in this repository
 - snapshot date
-- Groot revision, release, or archive identifier when available
+- repository revision, release, or archive identifier when available
 
 Use this form:
 
 ```markdown
 <!--
-Groot guidance snapshot:
+Engineering guidance snapshot:
 - Source: engineering/languages/<language>/base.md
 - Source: engineering/languages/<language>/profiles/<profile>.md
 - Source: engineering/languages/<language>/versions/<version>.md
 - Snapshot date: YYYY-MM-DD
-- Groot revision: unavailable
+- Repository revision: unavailable
 -->
 ```
 
@@ -43,7 +43,7 @@ Omit profile source lines when no profile applies.
 
 Snapshot metadata should be present because it enables future tooling or manual review to answer:
 
-- Which Groot files produced this project guidance?
+- Which source files produced this project guidance?
 - When was the guidance copied?
 - Has the canonical guidance changed since then?
 - Does the project need a refresh?
@@ -54,4 +54,4 @@ Stale detection should be advisory. A standalone project must continue to functi
 
 Markdown links are not imports.
 
-A link from project guidance to Groot may help a human find the source, but it does not make the linked instructions active. If an instruction should apply inside the project, copy it into the relevant project-local `AGENTS.md`.
+A link from project guidance to this repository may help a human find the source, but it does not make the linked instructions active. If an instruction should apply inside the project, copy it into the relevant project-local `AGENTS.md`.

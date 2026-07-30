@@ -1,17 +1,17 @@
 # AGENTS.md
 
 <!--
-Groot guidance snapshot:
+Engineering guidance snapshot:
 - Source: engineering/languages/zig/base.md
 - Source: engineering/languages/zig/profiles/tigerstyle.md
 - Source: engineering/languages/zig/versions/0.17.md
 - Snapshot date: 2026-07-27
-- Groot revision: unavailable
+- Repository revision: unavailable
 -->
 
 These instructions apply to this repository tree.
 
-This file is a portable project-local snapshot. The repository must not require Groot, symlinks to Groot, or external language-guidance files to build, test, review, package, or submit.
+This file is a portable project-local snapshot. The repository must not require external language-guidance files to build, test, review, package, or submit.
 
 ## AGENTS.md Scope
 
@@ -82,6 +82,6 @@ When using a Zig 0.17 development build, record the exact compiler revision in t
 
 ## Portability
 
-- Do not add symlinks to Groot.
-- Do not require Groot paths in build scripts, tests, editor settings, or CI.
-- If language guidance is refreshed from Groot, update the snapshot metadata above.
+- Do not add symlinks to this repository.
+- Do not require external guidance paths in build scripts, tests, editor settings, or CI.
+- If language guidance is refreshed from the source repository, update the snapshot metadata above.
