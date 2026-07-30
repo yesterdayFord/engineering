@@ -37,10 +37,10 @@ The hot path executes localized tactical decisions with minimal coordination.
 
 Examples include:
 
-- matching
-- order routing
-- quote and cancel decisions
-- risk gates
+- admission control
+- scheduling
+- routing decisions
+- safety gates
 
 Rules:
 
@@ -70,15 +70,15 @@ Rules:
 
 ### Warm Path
 
-The warm path maintains richer semantic state for risk, operator interfaces, analytics, and higher-level control.
+The warm path maintains richer semantic state for controls, operator interfaces, analytics, and higher-level coordination.
 
 Examples include:
 
 - canonical schemas
 - derived state
-- risk models
-- exposure views
-- subscription updates
+- policy views
+- health views
+- subscription fanout
 - operator dashboards
 
 Rules:
@@ -94,11 +94,11 @@ The replay path reconstructs behavior, tests hypotheses, investigates anomalies,
 
 Examples include:
 
-- replaying raw wire bytes
-- rebuilding order books
-- simulating matching
-- reconstructing risk state
-- investigating market anomalies
+- replaying raw events
+- rebuilding state from logs
+- simulating decisions
+- reconstructing derived state
+- investigating anomalies
 
 Rules:
 

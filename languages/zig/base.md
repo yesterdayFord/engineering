@@ -56,7 +56,7 @@ Memory must normally be:
 - arena-backed and allocated during initialization
 - drawn from fixed-capacity pools established before the data plane begins
 
-Heap allocation inside hot paths, event loops, request processing, matching, routing, parsing, or other steady-state operations is prohibited by default.
+Heap allocation inside hot paths, event loops, request processing, routing, parsing, or other steady-state operations is prohibited by default.
 
 Allocators may be used during initialization, control-plane work, tooling, experiments, tests, and explicitly approved project exceptions.
 

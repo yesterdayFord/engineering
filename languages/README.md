@@ -37,9 +37,6 @@ engineering/languages/
     portable/
         project-guidance-snapshots.md
             Rules for copying guidance into standalone repositories.
-        examples/
-            zig-matching-engine.AGENTS.md
-                Example project-level AGENTS.md.
 ```
 
 ## Governing Rules

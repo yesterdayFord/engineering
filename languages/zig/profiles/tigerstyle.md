@@ -1,6 +1,6 @@
 # TigerStyle Profile
 
-This profile captures a stricter deterministic-systems engineering style inspired by TigerBeetle's TigerStyle and architecture.
+This profile captures a stricter deterministic-systems engineering style inspired by TigerBeetle's public TigerStyle and architecture writing. It is an independent adaptation, not a copy.
 
 The Zig base guide is already TigerStyle-inspired by default. Apply this profile when a project wants to tighten that default into a more explicit deterministic-systems discipline because its correctness, latency, durability, or operational requirements justify the constraints.
 
