@@ -179,6 +179,15 @@ AI-generated structure should be treated as suspect until the behavior, ownershi
 - Preserve raw evidence before deriving interpretations.
 - Prefer a smaller system that is fully understood over a larger system that merely appears sophisticated.
 
+## Possible Future Extractions
+
+Some VIHO guidance may eventually justify separate principle files, especially around simplicity and local testing/replay. Do not split these prematurely.
+
+- Simplicity is currently part of VIHO's topology discipline: start with the smallest working system, avoid speculative scaffolding, and separate components only along real coordination domains.
+- Testing guidance is currently about VIHO-specific local completeness, deterministic fixtures, replay, and incident reproduction. If extracted, prefer a focused name such as `local-testing-and-replay.md` over a general `testing.md`.
+
+Create separate files only when their guidance is independently reusable without weakening VIHO's unified claim that physics, topology, coordination, and evidence are part of the architecture.
+
 ## Applying VIHO
 
 VIHO is a decision framework, not a mandatory target architecture.
