@@ -2,8 +2,8 @@
 
 **Vertically Integrated Hardware Orchestration**
 
-Version 0.3.1  
-Reference date: 2026-08-08
+Version 0.3.2  
+Reference date: 2026-08-12
 
 VIHO is an engineering lens for systems in which topology, locality, ownership, data movement, coordination, and failure behavior materially affect correctness or performance.
 
@@ -20,8 +20,6 @@ Moving bytes is often more expensive than computing on them. A system therefore 
 - Dependencies, build systems, tests, generated scaffolds, and development topology are part of the architecture.
 - A system is not complete if it cannot be built, tested, replayed, and understood locally without hidden external coordination.
 - The smallest working system is the first truthful architecture.
-- Optimize the interface before optimizing the implementation.
-- Optimize maintenance before adding features.
 
 VIHO favors explicit ownership, bounded complexity, operational readability, deterministic behavior, and evidence-driven architecture.
 
@@ -147,26 +145,6 @@ Do not scaffold architecture before behavior exists.
 
 Architecture should emerge from solving real problems. Each abstraction should reduce complexity rather than advertise sophistication.
 
-## Interface Discipline
-
-Interfaces should preserve simplicity across implementations and users.
-
-- Prefer a small, explicit machine-facing contract for important capabilities.
-- Treat protocol and API surfaces as the durable integration boundary.
-- Human-facing tools should compose over that boundary rather than become the only path to the capability.
-- A CLI is often the smallest useful reference, debugging, and scripting client for that contract.
-- A GUI is justified when it materially improves human understanding or operation.
-
-The interface should be optimized for correctness, clarity, observability, and change before implementation-specific optimization. A good implementation behind a bad interface still spreads complexity; a good interface allows implementations to evolve without forcing that complexity onto every caller.
-
-## Maintenance Before Features
-
-Feature work should not outrun the system's ability to absorb change.
-
-Before expanding capability, prefer improving the properties that make future change cheaper and safer: ownership, observability, failure recovery, testability, documentation, and replacement or removal paths.
-
-This is not a requirement to perfect maintenance before shipping useful behavior. It is a bias against repeatedly adding capability to a system whose cost of change is already compounding.
-
 ## Guidance for AI-Assisted Engineering
 
 AI should accelerate implementation, not generate architectural noise.
@@ -200,8 +178,6 @@ AI-generated structure should be treated as suspect until the behavior, ownershi
 - Measure before adding coordination.
 - Preserve raw evidence before deriving interpretations.
 - Prefer a smaller system that is fully understood over a larger system that merely appears sophisticated.
-- Make the system easier to change before asking it to do more.
-- If a capability exists only through a GUI, examine whether the underlying interface is incomplete.
 
 ## Possible Future Extractions
 
